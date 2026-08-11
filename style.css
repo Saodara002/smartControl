@@ -1,52 +1,56 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
+
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(to bottom, #ff2d2d, #1f1f1f);
-    justify-items: center;
-    align-content: center;
-    height: 100vh;
+
 }
 
-header img{
-    width: 45px;
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-form{
-    background: rgba(255,255,255,0.35);
+
+form {
+    background: rgba(255, 255, 255, 0.35);
     width: 450px;
     padding: 35px;
     border-radius: 25px;
     text-align: center;
-    border: 1px solid rgba(255,255,255,0.6);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-form div{
+form div {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-form div img{
+form div img {
     width: 110px;
     height: 110px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-h1{
+h1 {
     margin-bottom: 25px;
     font-size: 40px;
     font-weight: 300;
     color: #222;
 }
 
-label{
+label {
     display: block;
     text-align: left;
     margin-bottom: 6px;
@@ -54,7 +58,7 @@ label{
     color: #222;
 }
 
-input{
+input {
     width: 100%;
     padding: 12px;
     border: none;
@@ -63,11 +67,11 @@ input{
     outline: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.lk_senha{
+.lk_senha {
     display: block;
     text-align: left;
     margin-bottom: 20px;
@@ -75,12 +79,12 @@ a{
     color: #ff7272;
 
     text-shadow:
-    0 0 5px #b30000,
-    0 0 45px white,
-    0 0 80px #ff2d2d;
+        0 0 5px #b30000,
+        0 0 45px white,
+        0 0 80px #ff2d2d;
 }
 
-.lk_loguin{
+.lk_loguin {
     display: block;
     width: 100%;
     background-color: #b30000;
@@ -92,11 +96,11 @@ a{
     transition: 0.3s;
 }
 
-.lk_loguin:hover{
+.lk_loguin:hover {
     background-color: #d91d1d;
 }
 
-.lk_registro{
+.lk_registro {
     margin-top: 16px;
     display: block;
     width: 100%;
@@ -107,33 +111,32 @@ a{
     font-weight: bold;
 }
 
-.lk_registro:hover{
+.lk_registro:hover {
     background-color: #000;
 }
 
-.lk_pedro{
+.lk_pedro {
     display: block;
     text-align: left;
     margin-bottom: 20px;
     font-style: italic;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.6);
 
     text-shadow:
-    0 0 5px #b30000,
-    0 0 45px white,
-    0 0 80px #ff2d2d;
+        0 0 5px #b30000,
+        0 0 45px white,
+        0 0 80px #ff2d2d;
 }
 
-footer{
+footer {
     margin-top: 16px;
     justify-items: center;
     bottom: 15px;
 }
 
-footer iframe{
+footer iframe {
     border: none;
     border-radius: 15px;
-    display: flex
-    ;
-    
+    display: flex;
+
 }
