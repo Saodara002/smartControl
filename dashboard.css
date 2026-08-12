@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #c40000 0%, #8f1515 45%, #222 100%);
+    min-height: 100vh;
+    color: #d8d8d8;
+}
+
+header {
+    height: 95px;
+    display: flex;
+    justify-content:space-between;
+    /* flex-direction: column; */
+    align-items:center;
+    padding: 0 25px;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #111;
+}
+
+.piter {
+    color: #eee;
+    text-decoration: none;
+    
+}
+
+
+.img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.dashboard {
+    display: flex;
+    min-height: calc(90vh - 95px);
+}
+
+aside {
+    position: absolute;
+    width: 225px;
+    padding: 32px 24px;
+    background: rgba(40, 40, 40, 0.25);
+    border: 2px solid #191919;
+    border-radius: 10px;
+}
+
+.lista_ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+.link {
+    display: block;
+    padding: 13px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #ddd;
+    background: linear-gradient(to right, #3a3a3a, #bdbdbd);
+    border-radius: 7px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.link:hover {
+    background: #ff2d2d;
+    color: white;
+}
+
+main {
+    flex: 1;
+    padding: 38px 50px;
+    margin-left: 175px;
+}
+
+.relatorio-card {
+    /* margin-right: 50px; */
+    max-width: 950px;
+    margin: 0 auto;
+    background: #333;
+    border: 2px solid #191919;
+    border-radius: 28px;
+    padding: 28px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.35);
+}
+
+.relatorio-card h1 {
+    font-size: 27px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    color: #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+thead {
+    background: #ff3038;
+}
+
+th {
+    padding: 15px;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+}
+
+td {
+    padding: 14px;
+    text-align: center;
+    background: #3d3d3d;
+    color: #d7d7d7;
+    border-bottom: 1px solid #505050;
+}
+
+tbody tr:hover td {
+    background: #474747;
+}
+
+
+td:last-child {
+    font-weight: bold;
+}
+
+footer {
+    
+    text-align:end;
+    padding: 20px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
