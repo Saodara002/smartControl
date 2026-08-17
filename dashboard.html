@@ -3,10 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-
     <link rel="stylesheet" href="dashboard.css">
 </head>
 
@@ -14,66 +12,105 @@
 
     <header>
         <h1>SMART CONTROL</h1>
+    
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    
+        <!-- Navegação -->
+        <nav class="nav-menu" id="navMenu">
+            <ul class="lista_ul">
+                <li class="lista_li"><a class="link" href="dashboard.html">Início</a></li>
+                <li class="lista_li"><a class="link" href="#">Percentual de Gordura</a></li>
+                <li class="lista_li"><a class="link" href="#">Progressão de Carga</a></li>
+                <li class="lista_li"><a class="link" href="#">Percentual de Massa</a></li>
+                <li class="lista_li"><a class="link" href="#">Frequência Mensal</a></li>
+                <li class="lista_li"><a class="link" href="#">Tempo de Treino</a></li>
+            </ul>
+        </nav>
+
         <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDUFXU3UBDkX68HYHM-le6_3XqkCI4kH3lIfARF1yMDA&s=10"
             alt="Logo do Smart Control">
     </header>
 
-
-    <aside>
-        <ul class="lista_ul">
-            <li class="lista_li"><a class="link" href="dashboard.html">Início</a></li>
-            <li class="lista_li" ><a class="link" href="#">Percentual de Gordura</a></li>
-            <li class="lista_li" ><a class="link" href="#">Progressão de Carga</a></li>
-            <li class="lista_li" ><a class="link" href="#">Percentual de Massa</a></li>
-            <li class="lista_li" ><a class="link" href="#">Frequência Mensal</a></li>
-            <li class="lista_li" ><a class="link" href="#">Tempo de Treino</a></li>
-        </ul>
-    </aside>
     <div class="dashboard">
         <main>
+            <h1 class="titleCards">Painel de Indicadores</h1>
+
+            <section class="cards">
+                <div class="card">
+                    <h3>Progressão de Carga</h3>
+                    <p class="numCard">22%</p>
+                    <span>últimos três meses</span>
+                </div>
+
+                <div class="card">
+                    <h3>Frequência Mensal</h3>
+                    <p class="numCard">90%</p>
+                    <span>últimos três meses</span>
+                </div>
+
+                <div class="card">
+                    <h3>Percentual de Massa</h3>
+                    <p class="numCard">50%</p>
+                    <span>últimos três meses</span>
+                </div>
+
+                <div class="card">
+                    <h3>Percentual de Gordura</h3>
+                    <p class="numCard">10%</p>
+                    <span>últimos três meses</span>
+                </div>
+
+                <div class="card">
+                    <h3>Tempo de Treino</h3>
+                    <p class="numCard">666 min</p>
+                    <span>últimos três meses</span>
+                </div>
+            </section>
+
             <div class="relatorio-card">
                 <h1>Relatório de Acessos Recentes</h1>
 
-                <table border="1">
+                <table>
                     <thead>
                         <tr class="row">    
-                            <th class="header" >Nome</th>
-                            <th class="header" >Data</th>
-                            <th class="header" >Hora</th>
-                            <th class="header" >Status</th>
+                            <th class="header">Nome</th>
+                            <th class="header">Data</th>
+                            <th class="header">Hora</th>
+                            <th class="header">Status</th>
                         </tr>
                     </thead>
-
                     <tbody>
-                        <tr class="row"></tr>>
-                            <td class="dados" >Breno Pinto</td>
-                            <td class="dados" >12/03/2026</td>
-                            <td class="dados" >14:05</td>
-                            <td class="dados" >Sucesso</td>
+                        <tr class="row">
+                            <td class="dados">Breno Pinto</td>
+                            <td class="dados">12/03/2026</td>
+                            <td class="dados">14:05</td>
+                            <td class="dados">Sucesso</td>
                         </tr>
-
-                        <tr class="row"></tr>>
-                            <td class="dados" >Eduardo Jorge</td>
-                            <td class="dados" >14/10/2026</td>
-                            <td class="dados" >09:40</td>
-                            <td class="dados" >Sucesso</td>
+                        <tr class="row">
+                            <td class="dados">Eduardo Jorge</td>
+                            <td class="dados">14/10/2026</td>
+                            <td class="dados">09:40</td>
+                            <td class="dados">Sucesso</td>
                         </tr>
-
-                        <tr class="row"></tr>>
-                            <td class="dados" >Jesuítas Junior</td>
-                            <td class="dados" >11/09/2026</td>
-                            <td class="dados" >10:00</td>
-                            <td class="dados" >Falha</td>
+                        <tr class="row">
+                            <td class="dados">Jesuítas Junior</td>
+                            <td class="dados">11/09/2026</td>
+                            <td class="dados">10:00</td>
+                            <td class="dados">Falha</td>
                         </tr>
-                            
-                        <tr class="row"></tr>>
-                            <td class="dados" >Ana Castela</td>
-                            <td class="dados" >03/08/2026</td>
-                            <td class="dados" >10:30</td>
-                            <td class="dados" >Sucesso</td>
+                        <tr class="row">
+                            <td class="dados">Ana Castela</td>
+                            <td class="dados">03/08/2026</td>
+                            <td class="dados">10:30</td>
+                            <td class="dados">Sucesso</td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
         </main>
     </div>
 
@@ -82,6 +119,16 @@
             Portal Pedro Landia
         </a>
     </footer>
+
+    <!-- Script para funcionamento do menu hambúrguer -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 
 </body>
 
