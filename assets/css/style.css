@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #ff2d2d, #1f1f1f);
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+form {
+    background: rgba(255, 255, 255, 0.35);
+    width: 450px;
+    padding: 35px;
+    border-radius: 25px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+form div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+form div img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-size: 40px;
+    font-weight: 300;
+    color: #222;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+    margin-top: 12px;
+    color: #222;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.lk_senha {
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #ff7272;
+
+    text-shadow:
+        0 0 5px #b30000,
+        0 0 45px white,
+        0 0 80px #ff2d2d;
+}
+
+.lk_loguin {
+    display: block;
+    width: 100%;
+    background-color: #b30000;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    transition: 0.3s;
+}
+
+.lk_loguin:hover {
+    background-color: #d91d1d;
+}
+
+.lk_registro {
+    margin-top: 16px;
+    display: block;
+    width: 100%;
+    background-color: #1f1f1f;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.lk_registro:hover {
+    background-color: #000;
+}
+
+.lk_pedro {
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.6);
+
+    text-shadow:
+        0 0 5px #b30000,
+        0 0 45px white,
+        0 0 80px #ff2d2d;
+}
+
+footer {
+    margin-top: 16px;
+    justify-items: center;
+    bottom: 15px;
+}
+
+footer iframe {
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    max-width: 100%;
+}
+
+/*  */
+@media (max-width: 480px) {
+    body {
+        min-height: 100vh;
+    }
+
+    main {
+        padding: 18px 12px 26px;
+    }
+
+    form {
+        width: 100%;
+        padding: 22px 16px;
+        border-radius: 18px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 18px;
+    }
+
+    form div img {
+        width: 90px;
+        height: 90px;
+    }
+
+    label {
+        font-size: 0.95rem;
+    }
+
+    input {
+        padding: 11px 12px;
+        font-size: 0.95rem;
+    }
+
+    .lk_senha,
+    .lk_loguin,
+    .lk_registro,
+    .lk_pedro {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        margin-top: 14px;
+        padding: 0 12px 20px;
+    }
+
+    footer iframe {
+        height: 160px;
+        border-radius: 12px;
+    }
+}
