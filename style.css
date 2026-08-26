@@ -138,5 +138,58 @@ footer iframe {
     border: none;
     border-radius: 15px;
     display: flex;
+    max-width: 100%;
+}
 
+/*  */
+@media (max-width: 480px) {
+    body {
+        min-height: 100vh;
+    }
+
+    main {
+        padding: 18px 12px 26px;
+    }
+
+    form {
+        width: 100%;
+        padding: 22px 16px;
+        border-radius: 18px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 18px;
+    }
+
+    form div img {
+        width: 90px;
+        height: 90px;
+    }
+
+    label {
+        font-size: 0.95rem;
+    }
+
+    input {
+        padding: 11px 12px;
+        font-size: 0.95rem;
+    }
+
+    .lk_senha,
+    .lk_loguin,
+    .lk_registro,
+    .lk_pedro {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        margin-top: 14px;
+        padding: 0 12px 20px;
+    }
+
+    footer iframe {
+        height: 160px;
+        border-radius: 12px;
+    }
 }
