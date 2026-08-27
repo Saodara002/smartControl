@@ -1,74 +1,54 @@
-const elementoNome = document.querySelector('#nomeCompleto');
-const elementoData = document.querySelector('#dataAtual');
+const nomeCompleto = document.getElementById("nomeCompleto");
+const dataAtual = document.getElementById("dataAtual");
 
-const obterNomeUsuario = () => {
-    const nome = prompt('Digite seu nome:');
-    const sobrenome = prompt('Digite seu sobrenome:');
+if (nomeCompleto || dataAtual) {
+    let nome = prompt("Digite seu nome:");
+    let sobrenome = prompt("Digite seu sobrenome:");
 
-    const nomeLimpo = (nome || '').trim();
-    const sobrenomeLimpo = (sobrenome || '').trim();
-
-    if (!nomeLimpo && !sobrenomeLimpo) {
-        return 'Usuário';
+    if (!nome || nome.trim() === "") {
+        nome = "Usuário";
     }
 
-    return `${nomeLimpo || 'Usuário'} ${sobrenomeLimpo || ''}`.trim();
-};
+    if (!sobrenome || sobrenome.trim() === "") {
+        sobrenome = "";
+    }
 
-const formatarFusoHorario = (offsetMinutos) => {
-    const sinal = offsetMinutos > 0 ? '-' : '+';
-    const totalMinutos = Math.abs(offsetMinutos);
-    const horas = String(Math.floor(totalMinutos / 60)).padStart(2, '0');
-    const minutos = String(totalMinutos % 60).padStart(2, '0');
+    const usuario = `${nome} ${sobrenome}`.trim();
 
-    return `${sinal}${horas}:${minutos}`;
-};
-
-const formatarDataAtual = () => {
     const agora = new Date();
 
-    const diasSemana = [
-        'Domingo',
-        'Segunda-Feira',
-        'Terça-Feira',
-        'Quarta-Feira',
-        'Quinta-Feira',
-        'Sexta-Feira',
-        'Sábado'
+    const dias = [
+        "Domingo",
+        "Segunda-feira",
+        "Terça-feira",
+        "Quarta-feira",
+        "Quinta-feira",
+        "Sexta-feira",
+        "Sábado"
     ];
 
-    const diaSemana = diasSemana[agora.getDay()]
-        .split('-')
-        .map((parte) => parte.charAt(0).toUpperCase() + parte.slice(1))
-        .join('-');
-
-    const dia = String(agora.getDate()).padStart(2, '0');
-    const mes = String(agora.getMonth() + 1).padStart(2, '0');
+    const diaSemana = dias[agora.getDay()];
+    const dia = String(agora.getDate()).padStart(2, "0");
+    const mes = String(agora.getMonth() + 1).padStart(2, "0");
     const ano = agora.getFullYear();
-    const hora = String(agora.getHours()).padStart(2, '0');
-    const minuto = String(agora.getMinutes()).padStart(2, '0');
-    const fusoHorario = formatarFusoHorario(agora.getTimezoneOffset());
+    const hora = String(agora.getHours()).padStart(2, "0");
+    const minuto = String(agora.getMinutes()).padStart(2, "0");
 
-    return `${diaSemana}, ${dia}/${mes}/${ano} – ${hora}:${minuto} (${fusoHorario})`;
-};
+    const fusoMinutos = -agora.getTimezoneOffset();
+    const sinal = fusoMinutos >= 0 ? "+" : "-";
+    const fusoHoras = String(Math.floor(Math.abs(fusoMinutos) / 60)).padStart(2, "0");
+    const fuso = `${sinal}${fusoHoras}:00`;
 
-const atualizarSaudacao = () => {
-    if (!elementoNome || !elementoData) {
-        return;
+    const saudacao = `Olá, ${usuario}!`;
+    const dataFormatada = `${diaSemana}, ${dia}/${mes}/${ano} - ${hora}:${minuto} (${fuso})`;
+
+    if (nomeCompleto) {
+        nomeCompleto.textContent = saudacao;
     }
 
-    const usuario = obterNomeUsuario();
-    const dataAtual = formatarDataAtual();
+    if (dataAtual) {
+        dataAtual.textContent = dataFormatada;
+    }
 
-    elementoNome.textContent = `Olá, ${usuario}!`;
-    elementoData.textContent = `Hoje é ${dataAtual}`;
-};
-
-document.addEventListener('DOMContentLoaded', () => {
-    atualizarSaudacao();
-    const intervalo = setInterval(atualizarSaudacao, 60000);
-
-    window.addEventListener('beforeunload', () => {
-        clearInterval(intervalo);
-    });
-});
+    console.log(`${saudacao} Hoje é ${dataFormatada}`);
+}

@@ -224,7 +224,7 @@ footer a:hover {
     table {
         min-width: 600px;
     }
-}
+
     .menu-toggle {
         display: flex;
         z-index: 100;
@@ -265,3 +265,4 @@ footer a:hover {
         display: block;
         width: 100%;
     }
+}
