@@ -52,3 +52,48 @@ if (nomeCompleto || dataAtual) {
 
     console.log(`${saudacao} Hoje é ${dataFormatada}`);
 }
+const loginForm = document.querySelector('form.container');
+if (loginForm) {
+    loginForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        window.location.href = 'dashboard.html';
+    });
+}
+
+// pesquisa de usuários
+const campoPesquisa = document.querySelector("#campoPesquisa");
+const linhasTabela = document.querySelectorAll(".relatorio-card tbody tr");
+
+if (campoPesquisa && linhasTabela.length) {
+    campoPesquisa.addEventListener("input", function () {
+        const textoPesquisa = campoPesquisa.value.trim().toLowerCase();
+
+        linhasTabela.forEach(function (linha) {
+            const nome = linha.querySelector("td")?.textContent.toLowerCase() || "";
+            const deveMostrar = !textoPesquisa || nome.includes(textoPesquisa);
+
+            linha.classList.toggle("linha-escondida", !deveMostrar);
+        });
+    });
+}
+
+// isguro
+const botaoTema = document.querySelector("#botaoTema");
+
+if (botaoTema) {
+    botaoTema.addEventListener("click", function () {
+        document.body.classList.toggle("dark-theme");
+
+        if (document.body.classList.contains("dark-theme")) {
+
+            botaoTema.innerHTML = `<i class="fa-light fa-sun"></i>
+                Light Mode`;
+
+        } else {
+
+            botaoTema.innerHTML = `<i class="fa-light fa-moon"></i>
+                Dark Mode`;
+        }
+    });
+}
