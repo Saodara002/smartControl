@@ -52,14 +52,6 @@ if (nomeCompleto || dataAtual) {
 
     console.log(`${saudacao} Hoje é ${dataFormatada}`);
 }
-const loginForm = document.querySelector('form.container');
-if (loginForm) {
-    loginForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        window.location.href = 'dashboard.html';
-    });
-}
 
 // pesquisa de usuários
 const campoPesquisa = document.querySelector("#campoPesquisa");
