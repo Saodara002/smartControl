@@ -12,6 +12,11 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
+body.dark-theme {
+    background: linear-gradient(to bottom, #161616 0%, #1f1f1f 45%, #090909 100%);
+    color: #f1f1f1;
+}
+
 header {
     background-color: #8f1515;
     height: 95px;
@@ -91,7 +96,7 @@ main {
 
 .saudacao{
     display: flex;
-    width: 50vh;
+    width: 40vh;
     margin: 0 0 0 auto;
     justify-content: space-between;
     padding: 10px;
@@ -214,6 +219,108 @@ td {
 tbody tr:hover td {
     background: #474747;
 }
+
+.page-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 170px);
+    padding: 40px 20px;
+}
+
+.page-panel {
+    width: min(900px, 100%);
+    background: rgba(28, 28, 28, 0.9);
+    border: 2px solid #1b1b1b;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+}
+
+.eyebrow {
+    color: #ff5b5b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.page-panel h2 {
+    color: #fff;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 12px;
+}
+
+.page-description {
+    color: #d6d6d6;
+    font-size: 1.08rem;
+    margin-bottom: 28px;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+    margin-bottom: 32px;
+}
+
+.stat-card {
+    background: #3a3a3a;
+    border: 1px solid #1b1b1b;
+    border-radius: 16px;
+    padding: 22px 18px;
+}
+
+.stat-card.accent {
+    background: linear-gradient(135deg, #ff3b3b, #a70f0f);
+}
+
+.stat-card span {
+    display: block;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+    font-size: 0.95rem;
+}
+
+.stat-card strong {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.info-list {
+    list-style: disc;
+    margin-left: 20px;
+    color: #f1f1f1;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.botao-tema {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-tema img {
+    filter: brightness(1.2);
+}
+
+body.dark-theme .page-panel,
+body.dark-theme .card,
+body.dark-theme .relatorio-card,
+body.dark-theme .stat-card,
+body.dark-theme .saudacao {
+    background: #242424;
+}
+
+body.dark-theme .link {
+    background: linear-gradient(to right, #5b5b5b, #2a2a2a);
+}
+
 /*  */
 .linha-escondida {
     display: none;
